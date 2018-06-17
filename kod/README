@@ -1,0 +1,32 @@
+Program składa się w następujących składowych:
+1. Plik common_defs.hpp zawiera deklaracje używane we wszystkich fazach algorytmu
+2. Plik defines.hpp zawiera deklaracje klasy my_graph
+3. Plik tree_decomp_decl.hpp zawiera deklaracje klasy TreeDecomposition
+4. Plik tree_vert_defs.hpp zawiera deklaracje klasy TreeDecomposition
+5. Plik 1_out.cpp zawiera definicje składowych klasy my_graph wykorzystywane do liczenia dekompozycji drzewowej dla grafu 1-zewnętrznie planarnego
+6. Plik fot.cpp zawiera definicje składowych klasy my_graph wykorzystywane do wyznaczania ściany zewnętznej i warstw grafu
+7. Plik change_degree.cpp zawiera definicje składowych klasy my_graph wykorzystywane podczas rozszerzania wierzchołków stopnia co najmniej 3
+8. Plik make_tree.cpp zawiera definicje składowych klasy my_graph wykorzystywane do tworzenia drzewa rozpinającego dla grafu danego na wejściu
+9. Plik t_d_from_tree.cpp zawiera definicje składowych klasy my_graph wykorzystywane do konstrukcji dekompozycji drzewowej z drzewa rozpinającego
+10. Plik tree_decomp_imp.cpp zawiera implementację składowych klasy TreeDecomposition
+11. Plik tree_vert_imp.cpp zawiera implementację składowych TreeDecompositionVertex, między innymi funkcji liczących maksymalny zbiór niezależny
+12. Plik compute_td.cpp wczytuje graf i wywołuje składowe klasy my_graph, do wyliczenia dekompozycji drzewowej, a następnie składowe klasy TreeDecomposition do wyliczenia maksymalnego zbioru niezależnego
+13. Plik gen.cpp generuje graf 3-spójny, na SIZE wierzchołkach
+
+Wymagania: 
+- biblioteka boost
+- c++11
+
+Kompilacja:
+- do utworzenia programu należy wpisać komędę make w terminalu
+- utworzony zostanie plik wykonywalny wz
+
+Program przyjmuje graf w następującej formie:
+liczba_wierzcholkow liczba_krawedzi
+a b, gdzie a, b to wierzchołki krańcowe krawędzi
+
+W obecnej formie programu, program przyjmuje grafu rozmiaru do 100 wierzchołków.
+Program dla danego na wejściu 3-spójnego grafu planarnego liczy maksmylamy zbiór niezależny.
+Aby zwiększyć dokładność maksymalnego zbioru niezależnego w pliku common_defs.hpp należy zmienić zmienną ACCURACY i przekompliować program
+
+
